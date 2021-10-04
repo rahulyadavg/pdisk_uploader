@@ -107,6 +107,9 @@ async def multi_pdisk_up(ml_string):
     new_join_str = "".join(new_ml_string)
 
     urls = re.findall(r'(https?://[^\s]+)', new_join_str)
+    other_channels = re.findall(r'(https?://t.me[^\s]+)', new_join_str)
+    for i in other_channels:
+      urls.remove(i)
 
     nml_len = len(new_ml_string)
     u_len = len(urls)
