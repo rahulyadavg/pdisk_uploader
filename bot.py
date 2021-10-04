@@ -131,7 +131,7 @@ async def multi_pdisk_up(ml_string):
 async def new_pdisk_url(urls):
     new_urls = []
     for i in urls:
-        time.sleep(0.5)
+        time.sleep(0.8)
         new_urls.append(await pdisk_up(i))
     return new_urls
 
